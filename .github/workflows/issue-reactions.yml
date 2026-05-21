@@ -1,0 +1,39 @@
+name: Issue +1 Reactions
+
+on:
+  issue_comment:
+    types: [created, edited]
+  reaction:
+    types: [created]
+
+permissions:
+  issues: write
+
+jobs:
+  add-thumbs-up-from-comment:
+    if: github.event_name == 'issue_comment' && github.event.issue.pull_request == null && contains(github.event.comment.body, '+1')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssue({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              content: '+1',
+            });
+
+  mirror-thumbs-up-reaction:
+    if: github.event_name == 'reaction' && github.event.action == 'created' && github.event.reaction.content == '+1' && github.event.issue
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssue({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              content: '+1',
+            });

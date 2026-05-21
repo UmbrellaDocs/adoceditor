@@ -1,0 +1,16 @@
+[
+  { "name": "bug", "color": "d73a4a", "description": "Confirmed defect" },
+  { "name": "enhancement", "color": "a2eeef", "description": "Improvement to existing behavior" },
+  { "name": "feature-request", "color": "0e8a16", "description": "New capability request" },
+  { "name": "documentation", "color": "0075ca", "description": "Documentation-only work" },
+  { "name": "question", "color": "d876e3", "description": "Usage/support question" },
+  { "name": "help wanted", "color": "008672", "description": "Maintainers request community help" },
+  { "name": "good first issue", "color": "7057ff", "description": "Suitable for first-time contributors" },
+  { "name": "triage needed", "color": "bfe5bf", "description": "Needs initial maintainer triage" },
+  { "name": "roadmap", "color": "f9d0c4", "description": "Roadmap-tracked work" },
+  { "name": "wontfix", "color": "eb6420", "description": "Will not be implemented" },
+  { "name": "duplicate", "color": "cfd3d7", "description": "Covered by another issue" },
+  { "name": "priority: P0", "color": "b60205", "description": "Critical priority" },
+  { "name": "priority: P1", "color": "d93f0b", "description": "High priority" },
+  { "name": "priority: P2", "color": "fbca04", "description": "Normal priority" }
+]

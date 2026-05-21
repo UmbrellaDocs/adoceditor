@@ -1,0 +1,19 @@
+name: Project Automation
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  issues: read
+
+jobs:
+  add-to-project:
+    if: github.event.label.name == 'roadmap' || github.event.label.name == 'in progress'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue to "Roadmap & Backlog" project
+        uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: ${{ secrets.ROADMAP_PROJECT_URL }}
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
