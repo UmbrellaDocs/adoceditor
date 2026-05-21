@@ -13,15 +13,15 @@ Issue tracker, roadmap, and documentation for AdocEditor.
 ## Report issues
 
 Open an issue and use the relevant template:
-- Bug: `ISSUE_TEMPLATE/bug_report.md`
-- Feature: `ISSUE_TEMPLATE/feature_request.md`
-- Question: `ISSUE_TEMPLATE/question.md`
+- Bug: https://github.com/UmbrellaDocs/adoceditor/issues/new?template=bug_report.md
+- Feature: https://github.com/UmbrellaDocs/adoceditor/issues/new?template=feature_request.md
+- Question: https://github.com/UmbrellaDocs/adoceditor/issues/new?template=question.md
 
 Please remove or redact private data before posting.
 
 ## Request features
 
-Open a **Feature request** issue with user story, use cases, and acceptance criteria.
+Open a [**Feature request** issue](https://github.com/UmbrellaDocs/adoceditor/issues/new?template=feature_request.md) with user story, use cases, and acceptance criteria.
 
 ## Contributing
 
